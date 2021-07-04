@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Exam Login</title>
+    <link rel="stylesheet" type="text/css" href="login_pageStyle.css">
+        </head>
+    <body>
+        <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+            <div>
+            <h1> Login form your Exam</h1>
+            <form name="f1" action = "connect.jsp" onsubmit = "return validation()" method = "POST"> 
+            Username<br><input  type="text" placeholder="Username" id="user" name="user" required ><br>
+            Password<br><input type="password" placeholder="Password" id="pass" name="pass" required><br><br>
+            <input type="submit" placeholder="Submit">
+        </form>
+    </div>
+    
+    </body>
+</html>
